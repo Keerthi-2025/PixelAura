@@ -1,5 +1,4 @@
 import { Navlinks } from '@/app/constant/constant'
-import { link } from 'fs'
 import { MenuIcon, Search, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
