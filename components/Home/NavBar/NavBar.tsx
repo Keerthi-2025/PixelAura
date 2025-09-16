@@ -15,7 +15,13 @@ function NavBar() {
       <div className='md:flex items-center space-x-10 hidden'>
       {Navlinks.map((link)=>{
         return(
-          <Link key={link.id} href={link.url} className='text-white text-base w-fit block after:block after:content after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transistion after:duration-300 after:origin-center'>
+          <Link key={link.id} href={link.url} 
+            className="relative text-white text-base w-fit block 
+                   after:block after:content-[''] after:absolute 
+                   after:h-[3px] after:bg-yellow-400 after:w-full 
+                   after:scale-x-0 hover:after:scale-x-100 
+                   after:transition after:duration-300 after:origin-center"
+      >
           <p>{link.label}</p>
           </Link>
         )
@@ -25,7 +31,7 @@ function NavBar() {
       <div className='flex items-center mr-10 md:mr-16 space-x-5  text-white text-3xl '>
         <ShoppingCart className='w-6 h-6 cursor-pointer'/>
         <Search className='w-6 h-6 cursor-pointer'/>
-        <MenuIcon className='w-6 h-6 cursor-pointer'/>
+        <MenuIcon className='w-6 h-6 cursor-pointer md:hidden'/>
       </div>
     </div>
   )
