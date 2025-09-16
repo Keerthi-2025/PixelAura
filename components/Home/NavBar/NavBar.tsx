@@ -1,5 +1,6 @@
 import { Navlinks } from '@/app/constant/constant'
 import { link } from 'fs'
+import { MenuIcon, Search, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -19,6 +20,12 @@ function NavBar() {
           </Link>
         )
       })}
+      </div>
+
+      <div className='flex items-center mr-10 md:mr-16 space-x-5  text-white text-3xl '>
+        <ShoppingCart className='w-6 h-6 cursor-pointer'/>
+        <Search className='w-6 h-6 cursor-pointer'/>
+        <MenuIcon className='w-6 h-6 cursor-pointer'/>
       </div>
     </div>
   )
