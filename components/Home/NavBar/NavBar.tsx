@@ -1,0 +1,27 @@
+import { Navlinks } from '@/app/constant/constant'
+import { link } from 'fs'
+import Link from 'next/link'
+import React from 'react'
+
+function NavBar() {
+  return (
+    <div className='flex items-center justify-between fixed z-[100] w-full mx-auto transition-all duration-200'>
+      
+      <h1 className='text-3xl text-white font-bold ml-10 md:ml-16'>
+        PixelAura
+      </h1>
+
+      <div className='md:flex items-center space-x-10 hidden'>
+      {Navlinks.map((link)=>{
+        return(
+          <Link key={link.id} href={link.url} className='text-white text-base w-fit block after:block after:content after:absolute after:h-[3px] after:bg-yellow-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transistion after:duration-300 after:origin-center'>
+          <p>{link.label}</p>
+          </Link>
+        )
+      })}
+      </div>
+    </div>
+  )
+}
+
+export default NavBar
