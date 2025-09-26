@@ -90,6 +90,7 @@
 
 import { Button } from '@/components/ui/button';
 import axios from 'axios';
+import { Loader } from 'lucide-react';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 
@@ -185,6 +186,14 @@ function Hero() {
           <Button variant="secondary">Art</Button>
           <Button variant="secondary">AI</Button>
         </div>
+
+
+        { loading &&(
+            <div>
+                <Loader className='animate-spin mt-6'/>
+            </div>
+        )}
+        
 
       </div>
     </div>
