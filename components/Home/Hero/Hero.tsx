@@ -1,7 +1,20 @@
+"use client"
+
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useState } from 'react'
 
 function Hero() {
+
+    
+    const [prompt, setPrompt] = useState("");
+    const [image, setimage] = useState("");
+    const [loading, setloading] = useState(false);
+
+    const handleImageGenerate = async() =>{
+
+    }
+
+
   return (
     <div className='w-[95%] min-h-screen relative mx-auto mt-[20vh]'>
         
@@ -12,14 +25,18 @@ function Hero() {
             </h1>
             <p className='mt-3 text-sm text-center text-gray-300 md:text-base font-semibold'> Start creating unique, high-quality images in seconds with the power of AI.</p>
 
-            <div className='h-5 md:h-12 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%]   bg-white rounded-lg mt-12 px-2md:px-6 flex items-center justify-between'>
-                <input type='text' placeholder='Generate your thoughts into image' className='h-full rounded-lg  outline-none w-full 
-                text-black flex-1 placeholder:text-xs sm:placeholder:text-base text-center'/>
+            <div className='h-5 md:h-12 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] bg-white rounded-lg mt-12 px-2md:px-6 flex items-center justify-between'>
+
+                <input type='text'
+                 placeholder='Generate your thoughts into image'
+                  className='h-full rounded-lg  outline-none w-full text-black flex-1 placeholder:text-xs sm:placeholder:text-base text-center'
+                  value={prompt}
+                  onChange={(e)=>setPrompt(e.target.value)}/>
 
                 <Button variant="default" size={"lg"} className='mr-2'>Create</Button>
             </div>
 
-            <div className=' flex items-center mt-3 space-x-2'>
+            <div className='flex items-center mt-3 space-x-2'>
                 <p className='font-semibold'>Popular Tags :</p>
                 <Button variant={"secondary"}>Creative</Button>
                 <Button variant={"secondary"}>Fantasy</Button>
