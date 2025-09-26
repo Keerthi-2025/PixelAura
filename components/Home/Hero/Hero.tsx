@@ -133,6 +133,16 @@ function Hero() {
     }
   };
 
+
+
+  const handledownloadimage = () =>{
+    const link = document.createElement("a");
+    link.target="_blank";
+    link.href="image";
+    link.download="generated-img.jpg";
+    link.click();
+  }
+
   return (
     <div className="w-[95%] min-h-screen relative mx-auto mt-[20vh]">
       <div className="relative z-10 text-white flex flex-col items-center justify-center">
@@ -202,7 +212,7 @@ function Hero() {
         
         <img src={image} alt='ai image' className='max w-full h-[500] rounded-lg shadow-lg' loading='lazy'/>
         
-        
+    <Button onClick={handledownloadimage} className=' mt-4 mb-4 bg-orange-500  hover:bg-orange-600'>Download</Button>
         </div>  
         
         }
