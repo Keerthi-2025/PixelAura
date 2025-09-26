@@ -195,6 +195,18 @@ function Hero() {
         )}
         
 
+        {image && 
+        
+
+        <div className='mt-8 flex flex-col items-center'> 
+        
+        <img src={image} alt='ai image' className='max w-full h-[500] rounded-lg shadow-lg' loading='lazy'/>
+        
+        
+        </div>  
+        
+        }
+
       </div>
     </div>
   );
