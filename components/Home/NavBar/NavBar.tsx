@@ -1,7 +1,9 @@
+"use client"
+
 import { Navlinks } from '@/app/constant/constant'
 import { MenuIcon, Search, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 
@@ -10,8 +12,27 @@ type Props = {
 };
 
 function NavBar({openNav}:Props) {
+
+  const [navBg, setnavBg] = useState(false)
+
+     useEffect(() => {
+       const handler = () =>{
+        if(window.scrollY >= 90) setnavBg(true)
+        if(window.scrollY < 90) setnavBg(false);  
+       }
+
+       window.addEventListener('scroll', handler);
+
+       return () => window.removeEventListener('scroll', handler);
+    
+     }, [])
+
+     const bg_style = navBg ? "bg-gray-900 shadow-md" : ""
+     
+
+
   return (
-    <div className='flex items-center justify-between fixed z-[100] w-full mx-auto transition-all duration-200'>
+    <div className={`flex ${bg_style} items-center justify-between fixed z-[100] w-full mx-auto transition-all duration-200`}>
       
       <h1 className='text-3xl text-white font-bold ml-10 md:ml-16'>
         PixelAura
