@@ -6,13 +6,17 @@ type Props = {
 
 function SecHeading({heading} : Props) {
   return (
-    <div>
+    <div className='m-auto w-[80%]'>
         
-        <h1>
-            <p>
-                
+        <h1 className='text-2xl lg:text-3xl font-bold text-white'>{heading} </h1>
+            <p className='text-sm sm:text-base md:text-lg font-medium text-gray-200'>
+                Type your imagination and watch it come to life in seconds.
             </p>
-        </h1>
+
+
+
+            <div className='w-[90%] md:w-[80%] mx-auto mt-16'>Imageslider</div>
+       
     </div>
   )
 }
