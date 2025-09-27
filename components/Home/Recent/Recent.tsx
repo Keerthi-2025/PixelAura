@@ -2,7 +2,7 @@ import React from 'react'
 
 function Recent() {
   return (
-    <div>Recent</div>
+    <div className='bg-blue-900 pb-16 pt-16'>Recent</div>
   )
 }
 

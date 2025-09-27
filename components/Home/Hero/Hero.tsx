@@ -12,26 +12,28 @@ function Hero() {
   const [loading, setLoading] = useState(false);
 
   const handleImageGenerate = async () => {
-    
-    
 
     setLoading(true);
 
     const options = {
-      method: 'POST',
-      url: 'https://ai-text-to-image-generator-api.p.rapidapi.com/realistic',
-      headers: {
-        'x-rapidapi-key': 'e1cadccb18msh8d0437124b2b945p1e46a7jsne05abf0ef24b',
-        'x-rapidapi-host': 'ai-text-to-image-generator-api.p.rapidapi.com',
-        'Content-Type': 'application/json',
-      },
-      data: {
-        inputs: prompt,
-      },
-    };
+  method: 'POST',
+  url: 'https://ai-text-to-image-generator-flux-free-api.p.rapidapi.com/aaaaaaaaaaaaaaaaaiimagegenerator/quick.php',
+  headers: {
+    'x-rapidapi-key': 'e1cadccb18msh8d0437124b2b945p1e46a7jsne05abf0ef24b',
+    'x-rapidapi-host': 'ai-text-to-image-generator-flux-free-api.p.rapidapi.com',
+    'Content-Type': 'application/json'
+  },
+  data: {
+   prompt: prompt,
+    style_id: 4,
+    size: '1-1'
+  }
+};
+
 
     try {
       const response = await axios.request(options);
+      console.log(response.data);
       setImage(response.data.url);
       toast.success("Image generated successfully");
     } catch (error: unknown) {
@@ -45,12 +47,10 @@ function Hero() {
     }
   };
 
-
-
   const handledownloadimage = () =>{
     const link = document.createElement("a");
     link.target="_blank";
-    link.href="image";
+    link.href=image;
     link.download="generated-img.jpg";
     link.click();
   }
@@ -107,28 +107,48 @@ function Hero() {
           <Button variant="secondary">Portrait</Button>
           <Button variant="secondary">Art</Button>
           <Button variant="secondary">AI</Button>
+
+          
         </div>
-
-
-        { loading &&(
+            { loading &&(
             <div>
                 <Loader className='animate-spin mt-6'/>
             </div>
-        )}
-        
+        )} 
+         
+     {image && (
+  <div className="mt-8 flex flex-col items-center">
+    <img
+      src={image}
+      alt="Generated AI"
+      className="max-w-full h-[500px] rounded-lg shadow-lg"
+      loading="lazy"
+    />
+    <Button
+      onClick={handledownloadimage}
+      className="mt-4 mb-4 bg-orange-500 hover:bg-orange-600"
+    >
+      Download
+    </Button>
+  </div>
+)} 
 
-        {image && 
-        
 
-        <div className='mt-8 flex flex-col items-center'> 
+         {/* <div className="mt-8 flex flex-col ">
+            <img
+              src={image}
+              alt="Generated AI"
+              className="max-w-full h-[500px] rounded-lg shadow-lg"
+              loading="lazy"
+            />
+            <Button
+              onClick={handledownloadimage}
+              className="mt-4 mb-4 bg-orange-500 hover:bg-orange-600"
+            >
+              Download
+            </Button>
+          </div>  */}
         
-        <img src={image} alt='ai image' className='max w-full h-[500] rounded-lg shadow-lg' loading='lazy'/>
-        
-    <Button onClick={handledownloadimage} className=' mt-4 mb-4 bg-orange-500  hover:bg-orange-600'>Download</Button>
-        </div>  
-        
-        }
-
       </div>
     </div>
   );
