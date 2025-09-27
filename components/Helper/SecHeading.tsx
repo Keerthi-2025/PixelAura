@@ -15,7 +15,7 @@ function SecHeading({heading} : Props) {
 
 
 
-            <div className='w-[90%] md:w-[80%] mx-auto mt-16'>Imageslider</div>
+            <div className='w-[90%] md:w-[80%] mx-auto mt-16'></div>
        
     </div>
   )
