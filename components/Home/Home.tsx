@@ -1,13 +1,14 @@
 import React from 'react'
 import Hero from './Hero/Hero'
 import Recent from './Recent/Recent'
-import Slider from './Recent/Slider'
+import About from './About/About'
 
 function Home() {
   return (
-    <div className='overflow-hidden h-[2000px]'>
+    <div className='overflow-hidden h-[4000px]'>
       <Hero/>
       <Recent/>
+      <About/>
       
     </div>
   )

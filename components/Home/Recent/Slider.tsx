@@ -23,8 +23,6 @@ const responsive = {
   }
 };
 
-
-
 function Slider() {
   return (
     <Carousel
@@ -41,7 +39,7 @@ function Slider() {
     {["r1.jpg", "r2.jpg", "r3.jpg" , "r4.jpg", "r5.jpg"]. map(
         (image, index) =>(
             <div key={index} className='p-4'>
-                <div className='h-[300px] relativ w-full items-center '>  
+                <div className='h-[200px] relativ w-full items-center '>  
 
                 <div className="p-4">
                         <Image
@@ -52,16 +50,8 @@ function Slider() {
                             height={400}
                             className="object-cover rounded-lg"
                         />
-
-
-                         
-
                     </div>
-
-
                 </div>
-
-                
             </div>
         )
     )}
