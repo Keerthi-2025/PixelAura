@@ -15,6 +15,7 @@ function About() {
            height={300}
            className='rounded-lg mt-4  w-full '
            />
+           
         </div>
 
         <div className='xl:order-1'>

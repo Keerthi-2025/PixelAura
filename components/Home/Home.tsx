@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './Hero/Hero'
 import Recent from './Recent/Recent'
 import About from './About/About'
+import Price from './Price/Price'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Hero/>
       <Recent/>
       <About/>
+      <Price/>
       
     </div>
   )
