@@ -4,6 +4,7 @@ import Recent from './Recent/Recent'
 import About from './About/About'
 import Price from './Price/Price'
 import Review from './Review/Review'
+import FQA from './FAQ/FQA'
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <About/>
       <Price/>
       <Review/>
+      <FQA/>
       
     </div>
   )
