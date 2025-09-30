@@ -1,7 +1,6 @@
-import React from 'react'
-
 "use client"
 
+import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ReviewCard from './ReviewCard';
@@ -26,22 +25,30 @@ const responsive = {
 
 
 
-function Slider() {
-
-        <Carousel
+function ReviewSlider() {
+  return (   
+    <Carousel
       arrows={true}
       responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
+      ssr={true}
       infinite={true}
       autoPlay={true}
       autoPlaySpeed={2000}
       keyBoardControl={true}
     >
-        <div>
-            <ReviewCard/>
-        </div>
+      <div>
+        <ReviewCard image="r1.jpg" name="Jhon" role="Engineer" />
+      </div>
+
+      <div>
+        <ReviewCard image="r1.jpg" name="Bon" role="Devops Engineer" />
+      </div>
+
+      <div>
+        <ReviewCard image="r1.jpg" name="Con" role="Mech Engineer" />
+      </div>
     </Carousel>
-  
+  )
 }
 
-export default Slider
+export default ReviewSlider;
