@@ -4,7 +4,7 @@ import Slider from './Slider'
 
 function Recent() {
   return (
-    <div className='bg-blue-900 pb-16 pt-16'>
+    <div className='bg-blue-900 pb-45 pt-40 ' id='recent'>
     
     <SecHeading heading='Explore more'/>
     <Slider/>

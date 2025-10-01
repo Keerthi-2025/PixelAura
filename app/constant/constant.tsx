@@ -6,8 +6,8 @@ export const Navlinks = [
     },
     {
         id:2,
-        label:"Image",
-        url:"#"
+        label:"Gallery",
+        url:"#recent"
     },
     {
         id:3,
@@ -17,7 +17,7 @@ export const Navlinks = [
     {
         id:4,
         label:"Shop",
-        url:"#"
+        url:"#price"
     },
     {
         id:5,

@@ -4,7 +4,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className=' pt-10 pb-10' >
+    <div className=' pt-10 pb-10'  >
         <div className='w-[70%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 '> 
          <div className='order-2 xl:order-1'>
 

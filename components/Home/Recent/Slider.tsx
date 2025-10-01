@@ -47,7 +47,7 @@ function Slider() {
                             src={`/${image}`}
                             alt='images'
                             width={400}
-                            height={400}
+                            height={500}
                             className="object-cover rounded-lg"
                         />
                     </div>

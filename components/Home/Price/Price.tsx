@@ -5,7 +5,7 @@ import PriceCard from './PriceCard'
 
 function Price() {
     return (
-        <div className='pt-16 pb-16 bg-gray-200'>
+        <div className='pt-20 pb-40 bg-gray-200' id='price'>
             <div className='w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 '>
                 <div className='space-y-6'>
                     <h1 className='uppercase mb-6 font-bold'>Flexible and Affordable</h1>
