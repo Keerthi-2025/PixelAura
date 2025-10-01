@@ -4,7 +4,7 @@ import FAQCard from './FAQCard'
 
 function FQA() {
   return (
-    <div className='pt-16 pb-16 bg-gray-950'>
+    <div className='pt-20 pb-55 bg-gray-400' id='faq'>
         <div className='w-[80%] mx-auto mt-16 grid-cols-1 grid md:grid-cols-2 gap-10 items-center'>
     
             <div className="flex justify-center">

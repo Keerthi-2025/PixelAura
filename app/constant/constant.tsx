@@ -11,8 +11,8 @@ export const Navlinks = [
     },
     {
         id:3,
-        label:"Blog",
-        url:"#"
+        label:"FAQ",
+        url:"#faq"
     },
     {
         id:4,
