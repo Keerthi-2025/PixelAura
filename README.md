@@ -23,3 +23,26 @@ This project integrates a free AI Text-to-Image API from Rapid API, enabling use
 2. Mobile-Friendly: Tailwind CSS utilities ensure responsiveness across devices.
 
 3. Navigation Management: A central navLinks constant (array of { id, url, label }) simplifies link rendering.
+
+**⚡ Tech Stack**
+
+**1. Frontend:** Next.js 15
+
+**2. Styling:** Tailwind CSS
+
+**3. UI Components:** shadcn/ui
+
+**4. API Integration:** Rapid API
+
+
+**🔗 API Integration**
+
+This project uses the Text-to-Image Generator API from Rapid API.
+
+1. Sign up at Rapid API
+
+2. Subscribe to the Free Plan (10 requests/month).
+
+3. Obtain your API key.
+
+4. Add it to your project.
