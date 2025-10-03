@@ -50,6 +50,8 @@ This project integrates a free AI Text-to-Image API from Rapid API, enabling use
 4. Add it to your project.
 
 
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-brightgreen?style=for-the-badge&logo=vercel)](https://pixel-aura-kappa.vercel.app/)
    
 
 **📦 Installation**
@@ -83,6 +85,7 @@ npx shadcn-ui@latest init
 
 # 7. Run dev server
 Start the dev server with: npm run dev
+
 
 
 
